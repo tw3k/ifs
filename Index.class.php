@@ -1,7 +1,6 @@
 <?php
 
 /**
-
  * Index that wraps a numeric array.
  * All five public methods are needed to implement
  * the Iterator interface.
