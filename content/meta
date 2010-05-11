@@ -1,0 +1,54 @@
+<?php
+
+/*
+ * $secret is the admin password
+ * Change $secert below to your password
+ */
+
+if (!isset($_GET['context'])) $_GET['context'] = null;
+       switch ($_GET['context']) {
+        case 'newPageName':
+$title = 'newPageName';
+$dc_title = 'newPageName';
+$dc_description = 'newPageName';
+$description = 'newPageName';
+$keywords = 'newPageName';
+$newPageName = '-hit'; /* css for links */
+$admin = null;
+$index = null;
+        break;
+        case 'admin':
+$secret = sha1('ifs');
+$password = sha1($_POST['password']);
+if (isset($password)) {
+    if ($password == $secret) {
+        if (isset($_POST['rememberme']) && ($_POST['rememberme'] === 'on')) {
+            setcookie('ifs', $password, time()+(60*60*24*365));
+            header('Location: /admin');
+        } else {
+            setcookie('ifs', $password);
+            header('Location: /admin');
+        }
+    } else {
+        $logedin = 0;
+    }
+} else {
+    echo 'Something goes here.';
+}
+if ($_COOKIE['ifs'] == $secret){
+        $logedin = 1;
+}
+$title = 'Admin';
+$admin = '-hit';
+$index = null;
+        break;
+        default:
+$title = 'ifs: default metatags';
+$dc_title = 'ifs: default metatags';
+$dc_description = 'ifs: default metatagss';
+$description = 'ifs: default metatags';
+$keywords = 'ifs: default metatags';
+$admin = null;
+$index = '-hit';
+        break;
+}

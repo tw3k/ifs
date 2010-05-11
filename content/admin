@@ -1,0 +1,48 @@
+<?php
+
+/*
+ * $secret is the admin password
+ * Change the password in /content/meta
+ */
+
+$loginForm = '<script type="text/javascript">function f(){document.getElementById("login").password.focus();}window.onload = f;</script><form id="login" action="/admin" method="post"><div style="width:100%;text-align:center"><input id="password" type="password" name="password" value="" title="Enter password" style="text-align:center" /><input type="submit" name="login" value="login" title="Login"style="font-weight:bold" /><input type="checkbox" name="rememberme" checked="checked" title="Remember me" /></div></form>';
+
+$pageName = (empty($_GET['edit'])) ? 'page_name' : $_GET['edit'];
+$pageContent = (empty($_POST['pageContent'])) ? (empty($_GET['edit'])) ? file_get_contents('content/page_name') : file_get_contents('content/' .$_GET['edit']) : stripslashes($_POST['pageContent']);
+$htaccess = (empty($_POST['htaccess'])) ? file_get_contents('.htaccess') : $_POST['htaccess'];
+
+$pageForm = '<form name="createPage" action="/admin/' . htmlentities($pageName) . '" method="post"><div style="width:100%"><input name="pageName" type="text" value="' . htmlentities($pageName) . '" /><textarea name="pageContent" rows="6" cols="80" style="width:100%;height:400px" >' . htmlentities($pageContent, ENT_QUOTES) . '</textarea><br />htaccess<br /><textarea name="htaccess" rows="6" cols="80" value="" style="width:100%;height:250px" >' . htmlentities($htaccess, ENT_QUOTES) . '</textarea><br /><input type="submit" name="submit" value="Save" style="float:right" /></div></form><br style="clear:both" />';
+
+if (isset($_POST['submit'])){
+
+    $htaccessName = '.htaccess';
+    $htaccessContent = $_POST['htaccess'];
+
+    if (is_writable($htaccessName) && is_writable('content/' . $pageName )) {
+
+        if (!file_put_contents('content/' . $pageName, $pageContent)) {
+             echo "Cannot write file ($pageName)";
+             exit;
+        }
+        echo "Success, wrote to file ($pageName) ";
+
+        if (!file_put_contents($htaccessName, stripslashes($htaccessContent))) {
+             echo "Cannot write file ($htaccessName)";
+             exit;
+        }
+        echo "Success, wrote to file ($htaccessName)";
+    } else {
+        echo "The file $htaccessName or $pageName is not writable";
+    }
+}
+
+switch ($logedin) {
+    case 0:
+        echo $txt . ' ' . $loginForm;
+        break;
+    case 1:
+        echo $pageForm;
+        break;
+    default:
+        exit;
+}

@@ -1,0 +1,32 @@
+<a href="./" title="It's Forking Simple"><img src="/img/ifs.png" alt="It's Forking Simple" width="173" height="210" style="float:left;clear:all" /></a>
+<div style="margin-left:220px">
+<h1>ifs Is Forking Simple</h1>
+
+<p>
+    It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website.
+</p>
+
+<p>
+    After install get started by, editing the site <a href="./admin/index">index</a>.
+</p>
+
+<h2>Requirements for ifs</h2>
+<ul>
+    <li>Apache2 and mod_rewrite</li>
+    <li>PHP5</li>
+</ul>
+
+<h3>Highlights of ifs</h3>
+<ul>
+    <li>Easily create pages with 'clean urls'</li>
+    <li>Lightweight (24.0 KB) and a fast render time.</li>
+</ul>
+
+<h4>Installation of ifs</h4>
+<ul>
+    <li>git clone</li>
+    <li>Copy to web root</li>
+    <li>Change the admin password.</li>
+    <li>Make the content writable. i.e. 'chown -R www-data:www-data content/' and 'chown www-data:www-data .htaccess'.</li>
+</ul>
+</div>

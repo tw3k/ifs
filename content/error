@@ -1,0 +1,7 @@
+
+<h1>Oops!</h1>
+
+
+<?php echo '<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definition</a>: ' . $_GET['error'];
+
+
