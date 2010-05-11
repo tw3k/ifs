@@ -1,4 +1,4 @@
-<?php error_reporting(E_STRICT);
+<?php
 
 require_once getcwd() . '/content/meta';
 
@@ -10,16 +10,14 @@ require_once getcwd() . '/content/meta';
         <link type="text/css" href="http://jqueryui-0.tw3k.com/css/custom-theme/jquery-ui-1.8.bird.css" rel="stylesheet" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss" />
         <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="home" href="http://tw3k.net" title="tw3k.net" />
         <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-        <meta name="ICBM" content="42.26370, -84.55470" />
         <meta name="DC.title" content="<?php echo $dc_title?>" />
         <meta name="DC.description" content="<?php echo $dc_description?>" />
         <meta name="DC.publisher" content="tw3k" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta http-equiv="Content-Language" content="en" />
         <meta name="Copyright" content="Copyright (c) 2010, Forest Dean Feighner ~tw3k" />
-        <meta name="author" content="Forest Dean Feighner ~tw3k" />
+        <meta name="author" content="irs ~tw3k" />
         <meta name="description" content="<?php echo $description?>" />
         <meta name="keywords" content="<?php echo $keywords?>" />
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
