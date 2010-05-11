@@ -43,11 +43,11 @@ $admin = '-hit';
 $index = null;
         break;
         default:
-$title = 'ifs: default metatags';
-$dc_title = 'ifs: default metatags';
-$dc_description = 'ifs: default metatagss';
-$description = 'ifs: default metatags';
-$keywords = 'ifs: default metatags';
+$title = "ifs: It's Forking Simple";
+$dc_title = "ifs: It's Forking Simple";
+$dc_description = "It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website with PHP5 and Apache2.";
+$description = "It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website with PHP5 and Apache2.";
+$keywords = "PHP5, Apache2, mod_rewrite, skeleton, framework,git,github,ifs,It's Forking Simple";
 $admin = null;
 $index = '-hit';
         break;
