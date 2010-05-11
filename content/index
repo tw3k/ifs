@@ -1,9 +1,9 @@
-<a href="./" title="It's Forking Simple"><img src="/img/ifs.png" alt="It's Forking Simple" width="173" height="210" style="float:left;clear:all" /></a>
+a href="/ifs" title="It's Forking Simple"><img src="/img/ifs.png" alt="It's Forking Simple" width="173" height="210" style="float:left;clear:all" /></a>
 <div style="margin-left:220px">
 <h1>ifs Is Forking Simple</h1>
 
 <p>
-    It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website with PHP5 and Apache2.
+    It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website.
 </p>
 
 <p>
@@ -30,3 +30,12 @@
     <li>Make the content writable. i.e. 'chown -R www-data:www-data content/' and 'chown www-data:www-data .htaccess'.</li>
 </ul>
 </div>
+
+<br />
+<!-- Creative Commons License -->
+<a href="http://creativecommons.org/licenses/LGPL/2.1/">
+<img alt="CC-GNU LGPL" src="http://creativecommons.org/images/public/cc-LGPL-a.png" height="62" width="88" />
+</a><br />
+This software is licensed under the <a href="http://creativecommons.org/licenses/LGPL/2.1/">CC-GNU LGPL</a> version 2.1 or later.
+<!-- /Creative Commons License -->
+
