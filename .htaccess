@@ -1,0 +1,18 @@
+Options Indexes FollowSymLinks 
+<IfModule rewrite_module>
+    RewriteEngine On
+    RewriteBase /
+
+    # When adding a page a new rule must be made.
+    # Example:
+    RewriteRule  ^page_name$ /index.php?context=page_name	[L]
+
+    RewriteRule  ^admin$ /index.php?context=admin	[L]
+    RewriteRule  ^admin/(.*)$ /index.php?context=admin&edit=$1	[L]
+    RewriteRule  ^$ /index.php?context=index	[L]
+
+</IfModule>
+
+ErrorDocument 404 /index.php?context=error&error=404
+
+

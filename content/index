@@ -3,7 +3,7 @@
 <h1>ifs Is Forking Simple</h1>
 
 <p>
-    It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website.
+    It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website with PHP5 and Apache2.
 </p>
 
 <p>
@@ -19,14 +19,14 @@
 <h3>Highlights of ifs</h3>
 <ul>
     <li>Easily create pages with 'clean urls'</li>
-    <li>Lightweight (24.0 KB) and a fast render time.</li>
+    <li>Lightweight (20.4 KB) and a fast render time.</li>
 </ul>
 
 <h4>Installation of ifs</h4>
 <ul>
-    <li>git clone</li>
+    <li>git clone the source <a href="http://github.com/tw3k/ifs" title="ifs on github">from the ifs github page</a>.</li>
     <li>Copy to web root</li>
-    <li>Change the admin password.</li>
+    <li>Change the admin password (in content/meta).</li>
     <li>Make the content writable. i.e. 'chown -R www-data:www-data content/' and 'chown www-data:www-data .htaccess'.</li>
 </ul>
 </div>
