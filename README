@@ -1,0 +1,23 @@
+ifs Is Forking Simple
+
+It's Forking Simple, ifs for short, is a simple web site skeleton for rapidly deploying a small website.
+
+After install get started by, editing the site index.
+Requirements for ifs
+
+    * Apache2 and mod_rewrite
+    * PHP5
+
+Highlights of ifs
+
+    * Easily create pages with 'clean urls'
+    * Lightweight (20.4 KB) and a fast render time.
+
+Installation of ifs
+
+    * git clone the source from the ifs github page.
+    * Copy to web root
+    * Change the admin password (in content/meta).
+    * Make the content writable. i.e. 'chown -R www-data:www-data content/' and 'chown www-data:www-data .htaccess'.
+
+
